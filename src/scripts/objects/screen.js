@@ -2,22 +2,22 @@ const screen = {
     userProfile: document.querySelector('.profile-data'),
     renderUser(user) {
         this.userProfile.innerHTML = `<div class="info">
-                                <img src="${user.avatarUrl}" alt="Foto do perfil do usuário" />
-                                <div class="data">
-                                    <h1>${user.name ?? 'Não possui nome cadastrado 😢'} </h1>
-                                    <p>${user.bio ?? 'Não possui bio cadastrada 😢'} </p>
-                                    <p>🤳${user.followers} Seguidores</p>
-                                    <p>🤝 ${user.following} Seguindo</p>
-                                </div>
-                            </div>`
+                                        <img src="${user.avatarUrl}" alt="Foto do perfil do usuário" />
+                                        <div class="data">
+                                            <h1>${user.name ?? 'Não possui nome cadastrado 😢'} </h1>
+                                            <p>${user.bio ?? 'Não possui bio cadastrada 😢'} </p>
+                                            <p>🤳${user.followers} Seguidores</p>
+                                            <p>🤝 ${user.following} Seguindo</p>
+                                        </div>
+                                      </div>`
 
         let repositoriesItens = ''
         user.repositories.forEach(repo => repositoriesItens += `<li><a href ="${repo.html_url}" target="_blank">${repo.name}<br>
                                                                        <div class="datas">
-                                                                          <p>🍴 ${repo.forks}</P>
-                                                                          <p>⭐ ${repo.stargazers_count}</P>
-                                                                          <p>👀 ${repo.watchers}</P>
-                                                                          <p>📖 ${repo.language}</P>
+                                                                          <p>🍴 ${repo.forks ?? 'Sem forks'}</P>
+                                                                          <p>⭐ ${repo.stargazers_count ?? 'Sem estrelas'}</P>
+                                                                          <p>👀 ${repo.watchers ?? 'Sem visualizadores'}</P>
+                                                                          <p>📖 ${repo.language ?? 'Sem linguagem'}</P>
                                                                        </div>
                                                                     </a>
                                                                 </li>
