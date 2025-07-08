@@ -2,6 +2,8 @@
 
 Uma aplicação que consome a [GitHub API](https://api.github.com) para buscar dados de um usuário a partir de um nome de usuário digitado. O projeto foi criado com HTML, CSS e JavaScript puro, com foco em praticar requisições assíncronas com `fetch`, manipulação de DOM e tratamento de erros.
 
+🔗 **Acesse o projeto online:** [GitHub Pages](https://endriusssantos.github.io/projeto-mundo-real-com-fetch-e-github-api-main/)
+
 ---
 
 ## ✨ Funcionalidades
